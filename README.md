@@ -5,8 +5,10 @@ Will be provided after publication.
 ## Data availabitly
 Processed and raw single cell RNA sequencing data will be availablea after publication via the Gene Expression Omnibus under the series number GSE166403.
 
-## Script discription
+## Software
+Raw sequencing files were processed with cell ranger (v3.0.2). All script provided were run with R (version 4.0.2). Most process and analysis was performed with seurat (v3.2.2). For futher information of packages used, see references/r_requirements.txt. 
 
+## Script discription
 #### script for filtering of PVM datasets
 This script was used for the initial first loading of the cell ranger out put (filtered feature barcode matrix) and filtering of each individual data set for high quality cells, excluding extreme high and low feature count cells, cells with high mitochondrial percentage, cell with hemoglobin contamination (erythrocytes) and cells with reads for Ptprc (immune cell contamination).
 
