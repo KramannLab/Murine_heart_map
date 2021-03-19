@@ -1,7 +1,6 @@
 # Mapping the cardiac vascular niche in heart failure
 ## Summary 
-
-The cardiac vasculature and perivasculature are of major importance in homeostasis and during disease but we lack a complete understanding of its cellular heterogeneity and alteration in response to injury as a major driver of heart failure. Using combined genetic fate tracing with confocal imaging and single cell RNA sequencing of this niche in homeostasis and during heart failure, we unraveled a previously unappreciated heterogeneity of vascular and perivascular cell types including various distinct endothelial, fibroblast, pericyte and vascular smooth muscle cell populations with specific transcriptional changes in response to injury. Interstitial fibrosis was driven by various fibroblast subsets, with Thbs4+ fibroblasts showing the highest extracellular matrix gene expression. We identified that injury causes a loss of cellular cross-talk towards endothelium in the vascular niche as a potential driver of endothelial dysfunction. Our analysis of mural cells identified a previously unappreciated role of pericytes contributing to cardiac fibrosis and remodeling in heart failure.
+Will be provided after publication.
 
 ## Data availabitly
 Processed and raw single cell RNA sequencing data will be availablea after publication via the Gene Expression Omnibus under the series number GSE166403.
