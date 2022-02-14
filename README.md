@@ -9,35 +9,47 @@ Processed and raw single cell RNA sequencing data will be availablea after publi
 Raw sequencing files were processed with cell ranger (v3.0.2). All scripts provided were run with R (version 4.0.2). Most processing and analysis was performed with Seurat (v3.2.2). For futher information on packages used, see references/R_sessionInfo.txt . 
 
 ## Script discription
-#### script for filtering of PVM datasets
-This script was used for the initial first loading of the cell ranger out put (filtered feature barcode matrix) and filtering of each individual data set for high quality cells, excluding extreme high and low feature count cells, cells with high mitochondrial percentage, cell with hemoglobin contamination (erythrocytes) and cells with reads for Ptprc (immune cell contamination).
+#### script for first filtering of PVM datasets
+This script was used to load the datasets after cell ranger alignment in order to perform first quality filtering before any subsequent analysis.
+Samples were filtered for nfeature, mt-reads, immune cell and erythocyte contaminations.
+Integration of fibroblast, endothelial cell and mural cell data sets was performed afterwards by seurat cca.
 
-#### pairwise_integration (script Cdh5 / Col1a1 / Gli1 / Myh11 / NG2 / PDGFRb Sham and TAC pairwise integrated)
-These scripts were used for further filtering and analysis of pairwise integrated (seurat) dataset, proving the input for the script for the integration of fibroblast and mural cells. To be noticed, the actually pairwise integration function is already run in the script for filtering of PVM datasets and is prerequisite for these scripts. The Cdh5 script here is more complex as all analysis specific for endothelial cells were run here (required reference here: EC-atlas Heart heatmap table.csv)
-
-#### integration fibroblasts Col1a1 Gli1 Pdgfrb
-This script was used to integrate and process dataset from Col1a1 Gli1 Pdgfrb samples (sham and TAC each) based on seurat. Pairwise integration scripts were run beforehand to provide the input objects.
-
-#### integration VSMCs and pericytes Pdgfrb Myh11 Ng2
-This script was used to integrate and process dataset from Pdgfrb Myh11 Ng2 samples (sham and TAC each) based on seurat. Pairwise integration scripts were run beforehand to provide the input objects.
-
-#### integration of all samples_harmony
-This script was used for the integration of all 12 data sets based on harmony and subsequent analysis. The script for first filtering of PVM datasets was run beforehand to provide the input objects.
+#### 14 sample integration based on harmony
+This script was used for the integration of all 14 data sets based on harmony and subsequent analysis. The script for first filtering of PVM datasets was run beforehand to provide the input objects.
 
 #### filterLowTdtomCl_function_harmony
 This script provides the function that was used to filter cells based on tdTomato reads and is called in the harmony integration script.
 
-#### cell cycle analysis
-This script was used to perform cell cycle phase scoring per cell.
+#### script Endothelial cells integrated analysis
+This script was used to analyse the integrated dataset for endothelial cells from Cdh5 samples (sham and TAC each) based on seurat. The script for first filtering of PVM datasets was run beforehand to provide the input objects.
 
-#### dorothea testing
+#### script Fibroblast cells integrated analysis
+This script was used to analyse the integrated dataset for fibroblasts cells from Col1a1 Gli1 Pdgfrb samples (sham and TAC each) based on seurat. The script for first filtering of PVM datasets was run beforehand to provide the input objects.
+
+#### script for Mural cell integrated analysis
+This script was used to analyse the integrated dataset for mural cells from Myh11, Ng2 and Pdgfrb samples (sham and TAC each) based on seurat. The script for first filtering of PVM datasets was run beforehand to provide the input objects.
+
+#### helper_functions_DEG_GO_ploting
+This script provides several function to perfrom differential gene expression and gene set enrichment analysis, as well as some small function for plotting specific data.
+
+#### pathway activity prediction_progeny
+This script was used to estimate signal pathway activity per cell.
+
+#### pathway activity prediction_dorothea
 This script was used to estimate transcription factor activity per cell.
 
-#### ecm_score
-This script was used to perform scoring based on gene sets from the matrisome database (http://matrisomeproject.mit.edu/). The gene sets are also provided under references.
+#### ECMscore correlation
+This script was used to perform a correlation analysis of the ECMscore to gene expression in the fibroblast dataset.
 
-#### gProfileR2 for GO on DE_sig_filter_add
-This script was used to calculate differentially expressed genes per cluster and marker genes per cluster. Based on the results, association with GO, KEGG and Reactome was tested.
+#### python-correlation
+This script provides a helper function for the correlation analysis in python.
 
-#### Progeny testing
-This script was used to estimate signal pathway activity per cell.
+#### script for Forte MI data
+
+
+
+
+
+
+
+
