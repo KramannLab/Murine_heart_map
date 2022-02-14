@@ -6,7 +6,7 @@ Will be provided after publication.
 Processed and raw single cell RNA sequencing data will be availablea after publication via the Gene Expression Omnibus under the series number GSE166403.
 
 ## Software
-Raw sequencing files were processed with cell ranger (v3.0.2). All scripts provided were run with R (version 4.0.2). Most processing and analysis was performed with Seurat (v3.2.2). For futher information on packages used, see references/r_requirements.txt. 
+Raw sequencing files were processed with cell ranger (v3.0.2). All scripts provided were run with R (version 4.0.2). Most processing and analysis was performed with Seurat (v3.2.2). For futher information on packages used, see references/R_sessionInfo.txt . 
 
 ## Script discription
 #### script for filtering of PVM datasets
