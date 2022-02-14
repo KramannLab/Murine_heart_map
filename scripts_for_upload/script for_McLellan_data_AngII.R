@@ -1,4 +1,4 @@
-#check and integrate MacLellan data AngII heart scRNA
+#check and integrate McLellan data AngII heart scRNA
 #https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8810/files/
 #https://pubmed.ncbi.nlm.nih.gov/32795101/
 library(Seurat)
@@ -16,8 +16,8 @@ library(stringr)
 library(pals)
 source("~/Documents/FP_scRNA/R stuff/scripts/new PVM scripts/scripts_for_upload/helper_functions_DEG_GO_ploting.R")
 
-setwd("~/Documents/FP_scRNA/R stuff/MacLellan paper data angII heart scRNA/")
-sample="MacLellan_data_"
+setwd("~/Documents/FP_scRNA/R stuff/McLellan paper data angII heart scRNA/")
+sample="McLellan_data_"
 
 #colorblind friendly color panels for all figures
 #for conditions/stim #From Color Universal Design (CUD): https://jfly.uni-koeln.de/color/
@@ -44,7 +44,7 @@ half.gradient.col = brewer.pal(n = 9, name = "YlOrRd")
 col.ramp<-colorRampPalette(gradient.col)
 
 #load preprocessed data downloadad from EBI
-data <- read_tsv("~/Documents/FP_scRNA/R stuff/MacLellan paper data angII heart scRNA/processed_full_count_matrix.tsv") # processed data from the paper
+data <- read_tsv("~/Documents/FP_scRNA/R stuff/McLellan paper data angII heart scRNA/processed_full_count_matrix.tsv") # processed data from the paper
 data <- data.frame(data)
 head(data)
 #one cell was removed by not optmial data loading
@@ -105,7 +105,11 @@ for (cell in colnames(scMacL)) {
     stim[i]="angII"}
   i=i+1
 }
-scMacL$stim = factor(stim,levels = c("none","saline","angII"))
+sc
+
+
+
+$stim = factor(stim,levels = c("none","saline","angII"))
 scMacL$orig.ident = factor(sample_id,levels = c("none1","none2","saline1","saline2","angII_1","angII_2","angII_3","angII_4"))
 #save
 saveRDS(scMacL,file = paste0(sample,"seurat_object.RDS"))
