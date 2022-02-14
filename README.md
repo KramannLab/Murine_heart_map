@@ -35,7 +35,7 @@ This script provides several function to perfrom differential gene expression an
 #### pathway activity prediction_progeny
 This script was used to estimate signal pathway activity per cell.
 
-#### pathway activity prediction_dorothea
+#### transcription factor activity prediction_dorothea
 This script was used to estimate transcription factor activity per cell.
 
 #### ECMscore correlation
@@ -44,12 +44,23 @@ This script was used to perform a correlation analysis of the ECMscore to gene e
 #### python-correlation
 This script provides a helper function for the correlation analysis in python.
 
+#### trajectory pseudotime analysis monocle3
+This script was used to perform trajectory analysis with monocle3 and identify pseudotime asocitade genes.
+
+#### scVelo
+This script is python based and was used to perform RNA velocity analysis with scVelo.
+Spliced/unspliced alignment was analysed with command line function from velocyto.
+
 #### script for Forte MI data
+This script was used to process the dataset from Forte et al. as discribed in their study.
 
+#### script for McLellan data AngII
+This script was used to process the dataset from McLellan et al. as discribed in their study.
 
+#### script for integration PVM forteMI
+This script was used to integrated fibroblasts from this study and fibroblast from the Forte et al. data.
 
-
-
-
+#### script for integration PVM McLellanAngII
+This script was used to integrated fibroblasts from this study and fibroblast from the McLellan et al. data.
 
 
