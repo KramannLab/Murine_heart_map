@@ -1,4 +1,4 @@
-#integrate our heart map with MacLellan AngII data with harmony
+#integrate our heart map with McLellan AngII data with harmony
 library(harmony)
 library(Seurat)
 library(cowplot)
@@ -16,8 +16,8 @@ library(pheatmap)
 library(colorBlindness)
 source("~/Documents/FP_scRNA/R stuff/scripts/new PVM scripts/scripts_for_upload/helper_functions_DEG_GO_ploting.R")
 
-setwd("~/Documents/FP_scRNA/R stuff/MacLellan paper data angII heart scRNA/MacLellan_PVM_Fibro_int")
-sample = "MacLellan_PVM_Fibro_int"
+setwd("~/Documents/FP_scRNA/R stuff/McLellan paper data angII heart scRNA/MacLellan_PVM_Fibro_int")
+sample = "McLellan_PVM_Fibro_int"
 
 #colorblind friendly color panels for all figures
 #for conditions/stim #From Color Universal Design (CUD): https://jfly.uni-koeln.de/color/
@@ -46,7 +46,7 @@ col.ramp<-colorRampPalette(gradient.col)
 
 #----------load fibroblast dataset and merge-----------------
 Samples.combined <- readRDS(file ="~/Documents/FP_scRNA/R stuff/final_seurat_analysis/Fibroblast_integrated_all/Fibroblast_integrated__filtered_processed.rds")
-fibro.subset <- readRDS("~/Documents/FP_scRNA/R stuff/MacLellan paper data angII heart scRNA/McLellan_fibro_sub_fibroblast_subset_annotated.rds")
+fibro.subset <- readRDS("~/Documents/FP_scRNA/R stuff/McLellan paper data angII heart scRNA/McLellan_fibro_sub_fibroblast_subset_annotated.rds")
 
 #merge Seurat object for harmony
 samples.merged <- merge(x = fibro.subset, y = Samples.combined, project = sample)
