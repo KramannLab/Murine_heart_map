@@ -594,17 +594,6 @@ VlnPlot(Samples.combined,group.by = "celltypes.short",features = "met.endo.genes
   ggtitle("GO_metalloendopeptidase_activity")
 ggsave(filename = paste0(sample,"met.endo.genes_split_vln.jpeg"), width=5, height = 5)
 
-#-------plots after Stress scoring-----------------------------------
-Samples.combined<-scoreStress(Samples.combined)
-
-FeaturePlot(Samples.combined, features = "STRESSscore1",pt.size = 0.5,order = T) + scale_colour_gradientn(colours = gradient.col)
-ggsave(filename = paste0(sample,"_StressScore_f.jpeg"), width=10 , height = 10) 
-
-VlnPlot(Samples.combined,group.by = "celltypes.short",features = "STRESSscore1",pt.size = 0,cols = cluster.col)+
-  geom_boxplot(width=0.1,position = position_dodge(0.9),outlier.shape = NA,coef=0) +
-  theme(axis.title.x=element_blank(), axis.text.x=element_text(angle = 45,hjust = 1)) + NoLegend()
-ggsave(filename = paste0(sample,"StressScore_vln.jpeg"), width=5, height = 5)
-
 
 #-------correlation of ECM score to gene expression and dorothea TF activity scores------
 #calculated by the script: ECMscore correlation
