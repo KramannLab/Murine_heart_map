@@ -586,25 +586,6 @@ scoreCollagens <- function(sc.object){
   return(sc.object)
 }#end of score Collagens
 
-#----function to score for the expression of stress related genes-----
-scoreStress <- function(sc.object){
-  #-----------------STRESS score
-  #geneset from: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02048-6
-  #Fosb, Fos, Jun, Junb, Jund, Atf3, Egr1, Hspa1a, Hspa1b, Hsp90ab1, Hspa8, Hspb1, Ier3, Ier2, Btg1, Btg2, Dusp1
-  
-  #geneset from: https://www.nature.com/articles/s41598-019-45842-4
-  #Brd2, Dnaja1, Dnajb1, Egr1, Hsp90aa1, Hsp90ab1, Hspe1, Hspj1, Ier3, Nr4a1, Nr4a2, Scl38a2
-  
-  #geneset from:https://www.nature.com/articles/nmeth.4437/figures/1
-  #Junb, Fosb, Fos, Jun, Zfp36, Egr1, Hspa1a, Hspa1b, Hspa8, Hspb1, Cebpd, Cebpb, Atf3, Socs3, Jund, Hspe1, Hsp90ab1
-  
-  stress.markers = c("Fosb", "Fos", "Jun", "Junb", "Jund", "Atf3", "Egr1", "Hspa1a", "Hspa1b", "Hsp90ab1", "Hspa8", "Hspb1", "Ier3", "Ier2", "Btg1", "Btg2", "Dusp1","Brd2", "Dnaja1", "Dnajb1", "Egr1", "Hsp90aa1", "Hsp90ab1", "Hspe1",  "Ier3", "Nr4a1","Junb", "Fosb", "Fos", "Jun", "Zfp36", "Egr1", "Hspa1a", "Hspa1b", "Hspa8", "Hspb1", "Cebpd", "Cebpb", "Atf3", "Socs3", "Jund", "Hspe1", "Hsp90ab1")
-  stress.markers = unique(stress.markers)
-  features = list(stress.markers)
-  sc.object = AddModuleScore(object = sc.object, features = features, name = "STRESSscore", ctrl = 35,search = T)
-  return(sc.object)
-}#end of scoreStress
-
 #----function to score for the expression of EndMA related genes-----
 scoreEndMA <- function(sc.object){
   #load EndMA genes from #https://www.nature.com/articles/s41467-021-20905-1
