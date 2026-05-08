@@ -1,6 +1,7 @@
 # Mapping the cardiac vascular niche in heart failure
 ## Summary 
-Will be provided after publication.
+Abstract
+The cardiac vascular and perivascular niche are of major importance in homeostasis and during disease, but we lack a complete understanding of its cellular heterogeneity and alteration in response to injury as a major driver of heart failure. Using combined genetic fate tracing with confocal imaging and single-cell RNA sequencing of this niche in homeostasis and during heart failure, we unravel cell type specific transcriptomic changes in fibroblast, endothelial, pericyte and vascular smooth muscle cell subtypes. We characterize a specific fibroblast subpopulation that exists during homeostasis, acquires Thbs4 expression and expands after injury driving cardiac fibrosis, and identify the transcription factor TEAD1 as a regulator of fibroblast activation. Endothelial cells display a proliferative response after injury, which is not sustained in later remodeling, together with transcriptional changes related to hypoxia, angiogenesis, and migration. Collectively, our data provides an extensive resource of transcriptomic changes in the vascular niche in hypertrophic cardiac remodeling.
 
 ## Data availabitly
 Processed and raw single cell RNA sequencing data will be availablea after publication via the Gene Expression Omnibus under the series number GSE166403.
